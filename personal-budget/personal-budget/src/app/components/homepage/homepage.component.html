@@ -1,0 +1,28 @@
+<div>
+    <label>Select Month: </label>
+    <select (change)="monthChange($event.target.value)" [(ngModel)]="selectedMonth">
+        <option *ngFor="let month of months" value={{month}}>
+            {{month}}
+        </option>
+    </select>
+</div>
+<div *ngIf="showError"> {{errMsg}} </div>
+<div *ngIf="!showError" class="container center">
+    <div id="main">
+        <div class="page-area">
+            <article>
+                <h1>Expense Visualization</h1>
+                <!-- <p>
+                    <canvas id="myChart" width="400" height="350"></canvas>
+                </p> -->
+                <p>
+                    <canvas id="myChart" width="1000px" height="1000px" baseChart [chartType]="'pie'" [datasets]="dataSource.datasets"
+                        [labels]="dataSource.labels" [options]="dataSource.options" [legend]="true" [colors]="colors">
+                    </canvas>
+                </p>
+            </article>
+            <pb-line-chart [expenseData]="lineChartData"></pb-line-chart>
+            <pb-bar-chart [expenseData]="lineChartData"></pb-bar-chart>
+        </div>
+    </div>
+</div>

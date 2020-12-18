@@ -1,0 +1,11 @@
+<nav role="navigation" aria-label="navigation bar">
+  <ul role="group">
+      <li *ngIf = "loggedIn"><a [routerLink]="['/home']">HomePage</a></li>
+      <li *ngIf = "loggedIn"><a [routerLink]="['/addExpense']">AddExpense</a></li>
+      <li *ngIf = "loggedIn"><a [routerLink]="['/categories']">Categories</a></li>
+      <li *ngIf = "loggedIn"><a [routerLink]="['/about']">About</a></li>
+      <li *ngIf = "loggedIn"><a [routerLink]="['/contact']">Contact</a></li>
+      <li *ngIf = "!loggedIn"><a [routerLink]="['/login']">Login/SignUp</a></li>
+      <li *ngIf = "loggedIn"><a [routerLink]="['/login']" (click)="logoutUser()">LogOut</a></li>
+  </ul>
+</nav>

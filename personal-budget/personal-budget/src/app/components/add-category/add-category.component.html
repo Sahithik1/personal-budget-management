@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Categories</h1>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <table class="table table-bordered" formArrayName="categories">
+            <tr>
+                <th>Add Multiple Categories:</th>
+                <th width="150px"><button type="button" (click)="addCategory()" class="btn btn-primary">Add
+                        More</button></th>
+            </tr>
+            <tr *ngFor="let category of categories().controls; let i=index" [formGroupName]="i">
+                <td>
+                    Category :
+                    <input type="text" formControlName="categoryName" class="form-control">
+                </td>
+                <td>
+                    Limit :
+                    <input type="text" formControlName="limit" class="form-control">
+                </td>
+                <td>
+                    <button (click)="removeCategory(i)" class="btn btn-danger">Remove</button>
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+
+    <br />
+    {{this.productForm.value | json}}
+</div>

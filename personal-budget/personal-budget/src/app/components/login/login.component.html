@@ -1,0 +1,23 @@
+<div class="container-fluid" id="mainbody">
+    <div>
+        <form ngForm #loginForm="ngForm">
+            <main id="main">
+                <div class="row">
+                    <label for="email">Email: </label>
+                    <input type="text" ngModel name="email" id="email">
+                </div>
+                <br>
+                <div class="row">
+                    <label for="password">Password: </label>
+                    <input type="password" ngModel name="password" id="password">
+                </div>
+                <br>
+                <label for="email">Not a user? click here to <a [routerLink]="['/signup']">signup</a></label>
+                <br>
+                <div>
+                    <button type="submit" class="registerbtn" (click)="logIn(loginForm.value)">Login</button>
+                </div>
+            </main>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <h1>Categories</h1>
+  <div><a [routerLink]="['/addCategory']">Add Categories</a></div>
+  <div *ngIf = "isEmpty"> No Data, Proceed by adding categories</div>
+  <table *ngIf = "!isEmpty">
+     <thead>
+        <tr>
+           <th>Category Name</th>
+           <th>Limit</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr *ngFor="let item of tableData">
+           <td>{{ item.categoryName }}</td>
+           <td>{{ item.limit }}</td>
+        </tr>
+     </tbody>
+  </table>
+</div>

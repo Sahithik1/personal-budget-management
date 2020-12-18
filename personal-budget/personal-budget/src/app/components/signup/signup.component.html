@@ -1,0 +1,31 @@
+<div class="container-fluid" id="mainbody">
+    <div>
+        <form ngForm #signup="ngForm">
+            <main id="main">
+                <div class="row col-xs-4">
+                    <label for="name">FullName: </label>
+                    <input type="text" ngModel name="name" id="name">
+                </div>
+                <br>
+                <div class="row">
+                    <label for="password">Password: </label>
+                    <input type="password" ngModel name="password" id="password">
+                </div>
+                <br>
+                <div class="row">
+                    <label for="password2">Confirm Password: </label>
+                    <input type="password" ngModel name="password2" id="password2">
+                </div>
+                <br>
+                <div class="row">
+                    <label for="email">Email: </label>
+                    <input type="text" ngModel name="email" id="email">
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="registerbtn" (click)="register(signup.value)"> Register </button>
+                </div>
+            </main>
+        </form>
+    </div>
+</div>
