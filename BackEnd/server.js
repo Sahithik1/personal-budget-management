@@ -16,7 +16,7 @@ const api = require('./controllers/api/budget');
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://sahithi:sahi@cluster0.ccr5g.mongodb.net/budget?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
+mongoose.connect('mongodb+srv://sahithi:sahithi123@cluster0.ccr5g.mongodb.net/budget?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 

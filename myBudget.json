@@ -1,0 +1,49 @@
+{
+    "myBudget":[
+    {
+        "title": "Eat out",
+        "budget": 30,
+        "limit": 50
+    },
+    {
+        "title": "Rent",
+        "budget": 250,
+        "limit": 350
+    },
+    {
+        "title": "Groceries",
+        "budget": 90,
+        "limit": 150
+    },
+    {
+        "title": "Movies",
+        "budget": 50,
+        "limit": 90
+    }, 
+    {
+        "title": "Travel Expenses",
+        "budget": 300,
+        "limit": 350
+    }, 
+    {
+        "title": "Trip",
+        "budget": 200,
+        "limit":250
+    },
+    {
+        "title": "Repairs",
+        "budget": 44,
+        "limit": 50
+    },
+    {
+        "title": "Shopping",
+        "budget": 100,
+        "limit": 150
+    },
+    {
+        "title": "Medical Expenses",
+        "budget": 150,
+        "limit": 250
+    }
+]
+}
